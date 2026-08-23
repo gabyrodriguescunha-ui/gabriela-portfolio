@@ -1,0 +1,69 @@
+<section class="projects">
+
+  @for (projeto of projetos; track projeto.nome) {
+
+    <article class="project-card">
+
+      <!-- Imagem / screenshot -->
+      <div class="project-card__image">
+
+        <img
+          [src]="projeto.imagem"
+          [alt]="'Imagem do projeto ' + projeto.nome"
+        >
+
+      </div>
+
+
+      <!-- Nome -->
+      <h2 class="project-card__title">
+        {{ projeto.nome }}
+      </h2>
+
+
+      <!-- Descrição -->
+      <p class="project-card__description">
+        {{ projeto.descricao }}
+      </p>
+
+
+      <!-- Botão -->
+<div class="project-card__actions">
+
+  <!-- Site publicado -->
+  @if (projeto.demo) {
+
+    <a
+      class="project-card__button project-card__button--demo"
+      [href]="projeto.demo"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <span>▶</span>
+      ABRIR.EXE
+    </a>
+
+  }
+
+  <!-- Repositório -->
+  @if (!projeto.demo && projeto.github) {
+
+    <a
+      class="project-card__button project-card__button--github"
+      [href]="projeto.github"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <span>&lt;/&gt;</span>
+      GITHUB
+    </a>
+
+  }
+
+</div>
+
+    </article>
+
+  }
+
+</section>

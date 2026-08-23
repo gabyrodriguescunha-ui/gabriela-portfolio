@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&family=VT323&display=swap');
+
+:root {
+  --fonte-titulo: 'Press Start 2P', monospace;
+  --fonte-interface: 'VT323', monospace;
+  --fonte-texto: 'Share Tech Mono', monospace;
+  --fonte-menu-sistema: Tahoma, 'MS Sans Serif', sans-serif;
+  --cor-roxo-escuro: #120b3d;
+  --cor-rosa-principal: #ff1493;
+  --cor-rosa-claro: #ff69b4;
+  --cor-rosa-escuro: #9e145f;
+  --cor-janela: #d4d0c8;
+  --cor-conteudo: #f8f8f8;
+  --cor-branco: #fff;
+  --cor-cinza: #c6c6c6;
+  --cor-cinza-escuro: #707070;
+  --cor-preto: #111;
+  --altura-taskbar: 50px;
+  --borda-retro: 2px;
+}
+
+* { box-sizing: border-box; }
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: var(--fonte-texto);
+  background: var(--cor-roxo-escuro);
+}
+
+button { font-family: inherit; }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--cor-rosa-principal);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+/* Material Overrides */
+.mat-mdc-snack-bar-container.success-snackbar {
+  --mdc-snackbar-container-color: #4ade80;
+  --mdc-snackbar-supporting-text-color: #064e3b;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.window-frame { animation: fadeIn 0.22s ease-out; }
+
+/* Organiza o conteúdo quando uma janela ocupa toda a tela. */
+.window-frame.maximized app-projects .projects {
+  width: min(1500px, 100%);
+  margin: 0 auto;
+  padding: 16px;
+  gap: 12px;
+}
+
+.window-frame.maximized app-projects .project-card {
+  min-height: 285px;
+  padding: 10px;
+}
+
+.window-frame.maximized app-projects .project-card__image {
+  height: clamp(150px, 20vh, 220px);
+}
+
+.window-frame.maximized app-about .about__main,
+.window-frame.maximized app-about .about__technologies {
+  width: min(1200px, calc(100% - 32px));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.window-frame.maximized app-about .about__main {
+  padding-top: 24px;
+  align-items: flex-start;
+}
+
+.window-frame.maximized app-about .about__description {
+  max-width: 620px;
+}
+
+.window-frame.maximized app-about .about__technologies-list {
+  grid-template-columns: repeat(6, minmax(80px, 1fr));
+}
+
+@media (max-width: 900px) {
+  .window-frame.maximized app-projects .projects { grid-template-columns: repeat(2, 1fr); }
+  .window-frame.maximized app-about .about__technologies-list { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .window-frame.maximized app-projects .projects { grid-template-columns: 1fr; }
+}
+
+/* Responsive Utilities */
+@media (max-width: 768px) {
+  .mobile-hide {
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .tablet-hide {
+    display: none !important;
+  }
+}

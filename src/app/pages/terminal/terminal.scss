@@ -1,0 +1,78 @@
+.terminal {
+  width: 100%;
+  min-height: 200px;
+  padding: 15px;
+  background-color: var(--cor-roxo-escuro);
+  color: var(--cor-branco);
+  font-family: var(--fonte-texto);
+  font-size: clamp(13px, 1.4vw, 16px);
+  line-height: 1.4;
+  box-sizing: border-box;
+}
+
+/* Linha de comando */
+
+.terminal__line {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+/* Prompt */
+.terminal__prompt {
+  color: var(--cor-rosa-claro);
+  font-weight: bold;
+}
+
+/* Comando */
+.terminal__command {
+  color: var(--cor-branco);
+}
+
+/* Respostas */
+.terminal__response {
+  margin-top: 0px;
+  margin-bottom: 12px;
+  padding-left: 10px;
+  color: var(--cor-branco);
+}
+
+/* Formação */
+.terminal__response--education p {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.terminal__label {
+  color: var(--cor-rosa-claro);
+
+  font-weight: bold;
+}
+
+/* Cursor */
+.terminal__cursor {
+  width: 8px;
+  height: 16px;
+  display: inline-block;
+  background-color: var(--cor-rosa-claro);
+  animation: piscar-cursor 800ms infinite;
+}
+
+/* Animação do cursor */
+@keyframes piscar-cursor {
+
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+}
