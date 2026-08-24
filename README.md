@@ -1,59 +1,174 @@
-# GabrielaPortfolio
+# Gabriela.exe — Portfólio Full Stack
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.5.
+Portfólio pessoal desenvolvido em Angular, com uma interface interativa inspirada em sistemas operacionais retrô.
 
-## Development server
+O projeto apresenta minha trajetória, tecnologias, formas de contato e principais trabalhos por meio de janelas que podem ser abertas, movidas, minimizadas, maximizadas e fechadas.
 
-To start a local development server, run:
+## Acesse o projeto
+
+🔗 [Visualizar portfólio online](https://portfolio-gabriela-rodrigues.netlify.app/)
+
+## Funcionalidades
+
+- Interface inspirada em um desktop retrô;
+- Ícones para acessar as diferentes seções;
+- Menu iniciar e barra de tarefas;
+- Sistema de janelas interativas;
+- Possibilidade de minimizar, maximizar, restaurar e fechar janelas;
+- Controle de sobreposição das janelas;
+- Seção de apresentação profissional;
+- Exibição das tecnologias utilizadas;
+- Galeria de projetos com links para demonstração e GitHub;
+- Área de contato;
+- Terminal visual;
+- Layout responsivo para computadores e dispositivos móveis.
+
+## Seções do portfólio
+
+### Sobre mim
+
+Apresentação da minha trajetória como jornalista e desenvolvedora Full Stack, reunindo comunicação, tecnologia e criação visual.
+
+### Projetos
+
+Galeria com alguns dos projetos que desenvolvi:
+
+- Cultiva Gestão;
+- ClickStore;
+- Revela;
+- Pokédex;
+- Adota+;
+- Sakura Trip.
+
+### Contato
+
+Janela inspirada no Bloco de Notas, com acesso ao meu e-mail, GitHub e LinkedIn.
+
+### Terminal
+
+Interface visual inspirada em terminais de sistemas operacionais.
+
+## Tecnologias
+
+- Angular 22;
+- TypeScript;
+- HTML;
+- SCSS;
+- Angular Material;
+- Vitest;
+- Git e GitHub;
+- Netlify.
+
+## Conceitos aplicados
+
+- Componentes standalone;
+- Gerenciamento de estado com Signals;
+- Serviços Angular;
+- Componentização da interface;
+- Interfaces TypeScript;
+- Layout responsivo;
+- Controle dinâmico de janelas;
+- Renderização condicional;
+- Eventos entre componentes;
+- Organização por componentes, páginas, modelos e serviços.
+
+## Estrutura do projeto
+
+```text
+src/app/
+├── components/
+│   ├── desktop-icon/
+│   ├── start-menu/
+│   ├── taskbar/
+│   ├── title-bar/
+│   ├── window-container/
+│   └── window-frame/
+├── models/
+│   ├── project.ts
+│   ├── window-config.ts
+│   └── window-data.ts
+├── pages/
+│   ├── about/
+│   ├── contact/
+│   ├── projects/
+│   └── terminal/
+├── services/
+│   ├── theme.ts
+│   └── window-manager.ts
+├── app.config.ts
+├── app.routes.ts
+└── app.ts
+```
+## Como executar o projeto
+
+### Pré-requisitos
+
+Antes de começar, tenha instalado em seu computador:
+
+- [Node.js](https://nodejs.org/)
+- npm
+- Git
+
+### Instalação
+
+Clone o repositório:
 
 ```bash
-ng serve
+git clone https://github.com/gabyrodriguescunha-ui/gabriela-portfolio.git
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Entre na pasta do projeto:
 
 ```bash
-ng generate component component-name
+cd gabriela-portfolio
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Instale as dependências:
 
 ```bash
-ng generate --help
+npm install
 ```
 
-## Building
-
-To build the project run:
+Inicie o projeto:
 
 ```bash
-ng build
+npm start
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Depois, acesse no navegador:
 
-## Running unit tests
+```text
+http://localhost:4200
+```
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## Como executar os testes
+
+Para executar os testes do projeto:
 
 ```bash
-ng test
+npm test -- --watch=false
 ```
 
-## Running end-to-end tests
+## Build de produção
 
-For end-to-end (e2e) testing, run:
+Para gerar os arquivos de produção:
 
 ```bash
-ng e2e
+npm run build
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Os arquivos compilados serão armazenados na pasta `dist/`.
 
-## Additional Resources
+## Responsividade
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+O portfólio possui layout responsivo e foi adaptado para computadores, tablets e celulares.
+
+Em dispositivos móveis, os ícones, textos, janelas e elementos de navegação são reorganizados para oferecer uma experiência adequada a telas menores.
+
+## Autora
+
+Desenvolvido por **Gabriela Rodrigues**.
+
+- [Portfólio](https://portfolio-gabriela-rodrigues.netlify.app/)
+- [GitHub](https://github.com/gabyrodriguescunha-ui)
+- [LinkedIn](https://www.linkedin.com/in/gabriela-rodrigues-b7289119a/)
